@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-11T15:19:19.876395" rpa="false" schemaversion="5">
+<suite id="s1" name="Voo" source="C:\Users\Amanda\Desktop\PHPTravels\suites\voo\voo.robot">
+<test id="s1-t1" name="TC01 - Fazendo Cadastro e realizando busca de passagem de destinos dentro dos EUA na classe econômica" line="8">
+<kw name="Acessar o site e logar" owner="setup_teardown" type="SETUP">
+<kw name="Dado que eu acesse o php travels" owner="home_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:20.285759" level="INFO">Opening browser 'chrome' to base url 'https://www.phptravels.net/'.</msg>
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-11T15:19:20.285759" elapsed="15.106148"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-11T15:19:35.391907" elapsed="0.295801"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:20.285759" elapsed="15.401949"/>
+</kw>
+<kw name="E realize o cadastro" owner="registro_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:35.691560" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/div[2]/ul/li[3]/a'.</msg>
+<arg>${home.A_OpcaoAccount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:35.689674" elapsed="0.202079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.A_Signup}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:35.891753" elapsed="0.051621"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:35.944373" level="INFO">Clicking element '//a[@href="https://www.phptravels.net/signup"]'.</msg>
+<arg>${home.A_Signup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:35.944373" elapsed="3.737985"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${registro.Input_PrimeiroNome}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:39.683821" elapsed="0.032243"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:39.717062" level="INFO">Typing text 'Ryan' into text field '//input[@id="firstname"]'.</msg>
+<arg>${registro.Input_PrimeiroNome}</arg>
+<arg>${dados_registro.PrimeiroNome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:39.716064" elapsed="0.165559"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${registro.Input_UltimoNome}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:39.882622" elapsed="0.165220"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:40.049839" level="INFO">Typing text 'Goslin' into text field '//input[@id="last_name"]'.</msg>
+<arg>${registro.Input_UltimoNome}</arg>
+<arg>${dados_registro.UltimoNome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:40.048841" elapsed="0.155501"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:40.207626" level="INFO">Clicking element '//*[@id="signup"]/div/div/div/div[3]/div[1]/div/div/button'.</msg>
+<arg>${registro.Button_Pais}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:40.205343" elapsed="0.254019"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:40.461360" level="INFO">Typing text 'United States' into text field '//*[@id="signup"]/div/div/div/div[3]/div[1]/div/div/div/div[1]/input'.</msg>
+<arg>${registro.Input_Pais}</arg>
+<arg>${dados_registro.Pais}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:40.459362" elapsed="0.343295"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${registro.Button_EUA}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:40.803657" elapsed="0.055285"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:40.860774" level="INFO">Clicking element '//*[@id="bs-select-1-226"]/span'.</msg>
+<arg>${registro.Button_EUA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:40.858942" elapsed="0.090664"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${registro.Input_Telefone}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:40.949606" elapsed="0.188935"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:41.140542" level="INFO">Typing text '555-432' into text field '//input[@id="phone"]'.</msg>
+<arg>${registro.Input_Telefone}</arg>
+<arg>${dados_registro.Telefone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:41.139542" elapsed="0.183460"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${registro.Input_Email}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:41.323002" elapsed="0.036912"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:41.362355" level="INFO">Typing text 'teste1@gmail.com' into text field '//input[@id="user_email"]'.</msg>
+<arg>${registro.Input_Email}</arg>
+<arg>${dados_registro.Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:41.359914" elapsed="0.213501"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${registro.Input_Senha}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:41.573415" elapsed="0.052969"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:41.633806" level="INFO">Typing text '123456' into text field '//input[@id="password"]'.</msg>
+<arg>${registro.Input_Senha}</arg>
+<arg>${dados_registro.Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:41.630233" elapsed="0.224012"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:35.688708" elapsed="6.166535"/>
+</kw>
+<kw name="E faça o Login" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:41.856244" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/div[2]/ul/li[3]/a'.</msg>
+<arg>${login.Button_Account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:41.856244" elapsed="0.121109"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Button_Login}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:41.977353" elapsed="0.110668"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:42.089021" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/div[2]/ul/li[3]/ul/li[1]/a'.</msg>
+<arg>${login.Button_Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:42.089021" elapsed="2.810276"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:44.899297" elapsed="0.081690"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:44.982986" level="INFO">Typing text 'teste1@gmail.com' into text field '//input[@id="email"]'.</msg>
+<arg>${login.Input_EmailLogin}</arg>
+<arg>${dados_registro.Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:44.981988" elapsed="0.165216"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:45.147204" elapsed="0.048992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:45.203191" level="INFO">Typing text '123456' into text field '//input[@id="password"]'.</msg>
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>${dados_registro.Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:45.198192" elapsed="0.175668"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:41.855243" elapsed="3.518617"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:20.285759" elapsed="25.089101"/>
+</kw>
+<kw name="Dado que eu realizo uma busca de um vôo ida e volta" owner="voo_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Flights.Button_Voo}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:45.376857" elapsed="0.046287"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:45.425143" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/div[1]/ul/li[1]/a'.</msg>
+<arg>${Flights.Button_Voo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:45.424145" elapsed="4.484139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Flights.Button_IdaeVolta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:49.908284" elapsed="0.140506"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:50.049789" level="INFO">Clicking element '//*[@id="round-trip"]'.</msg>
+<arg>${Flights.Button_IdaeVolta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:50.048790" elapsed="0.473417"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:45.375858" elapsed="5.147584"/>
+</kw>
+<kw name="E saindo de Los Angeles" owner="voo_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Flights.Button_Ida}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:50.527444" elapsed="0.043470"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:50.572913" level="INFO">Clicking element '//*[@id="select2--container"]/div'.</msg>
+<arg>${Flights.Button_Ida}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:50.571914" elapsed="0.171979"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:50.747890" level="INFO">Typing text 'WHP' into text field '//*[@id="#fadein"]/span/span/span[1]/input'.</msg>
+<arg>${Flights.Input_Ida}</arg>
+<arg>${voo_data.Ida}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:50.743893" elapsed="0.120724"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:50.865614" level="INFO">Sending key(s) ('ARROW_DOWN',) to //*[@id="select2--container"]/div element.</msg>
+<msg time="2024-06-11T15:19:52.079976" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg time="2024-06-11T15:19:52.079976" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>${Flights.Button_Ida}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-06-11T15:19:50.864617" elapsed="1.266018"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:52.130635" level="INFO">Sending key(s) ('ENTER',) to //*[@id="select2--container"]/div element.</msg>
+<msg time="2024-06-11T15:19:52.442694" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-06-11T15:19:52.442694" level="INFO">Releasing special key ENTER.</msg>
+<arg>${Flights.Button_Ida}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-06-11T15:19:52.130635" elapsed="0.513197"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-11T15:19:53.644952" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-11T15:19:52.644833" elapsed="1.000119"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:50.525442" elapsed="3.119510"/>
+</kw>
+<kw name="E indo para Nova York" owner="voo_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Flights.Button_Volta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T15:19:53.644952" elapsed="0.049051"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:53.695594" level="INFO">Clicking element '//*[@id="onereturn"]/div[2]/div[2]/div[2]/span/span[1]/span/span[2]/b'.</msg>
+<arg>${Flights.Button_Volta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:53.695006" elapsed="0.080622"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:53.778628" level="INFO">Typing text 'JFK' into text field '//*[@id="#fadein"]/span/span/span[1]/input'.</msg>
+<arg>${Flights.Input_Volta}</arg>
+<arg>${voo_data.Volta}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:53.776629" elapsed="0.105104"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:53.882730" level="INFO">Sending key(s) ('ARROW_DOWN',) to //*[@id="onereturn"]/div[2]/div[2]/div[2]/span/span[1]/span/span[2]/b element.</msg>
+<msg time="2024-06-11T15:19:54.170140" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg time="2024-06-11T15:19:54.170140" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>${Flights.Button_Volta}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-06-11T15:19:53.881733" elapsed="0.299031"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:54.182764" level="INFO">Sending key(s) ('ENTER',) to //*[@id="onereturn"]/div[2]/div[2]/div[2]/span/span[1]/span/span[2]/b element.</msg>
+<msg time="2024-06-11T15:19:54.489814" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-06-11T15:19:54.489814" level="INFO">Releasing special key ENTER.</msg>
+<arg>${Flights.Button_Volta}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-06-11T15:19:54.181766" elapsed="0.340262"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:53.644952" elapsed="0.878075"/>
+</kw>
+<kw name="E saindo na data" owner="voo_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:54.526696" level="INFO">Clicking element '//*[@id="departure"]'.</msg>
+<arg>${Flights.Button_DataIda}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:54.525700" elapsed="0.183742"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:54.711441" level="INFO">Sending key(s) ('CTRL+a',) to //*[@id="departure"] element.</msg>
+<msg time="2024-06-11T15:19:55.205781" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2024-06-11T15:19:55.205781" level="INFO">Sending key a</msg>
+<msg time="2024-06-11T15:19:55.205781" level="INFO">Releasing special key CONTROL.</msg>
+<arg>${Flights.Button_DataIda}</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-06-11T15:19:54.710441" elapsed="0.708302"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:55.421736" level="INFO">Typing text '15-06-2024' into text field '//*[@id="departure"]'.</msg>
+<arg>${Flights.Button_DataIda}</arg>
+<arg>${voo_data.Data_Ida}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:55.419738" elapsed="0.249391"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:54.524650" elapsed="1.144479"/>
+</kw>
+<kw name="E voltando na data" owner="voo_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:55.672261" level="INFO">Clicking element '//*[@id="return_date"]'.</msg>
+<arg>${Flights.Button_DataVolta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:55.671259" elapsed="0.082231"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:55.754490" level="INFO">Sending key(s) ('CTRL+a',) to //*[@id="return_date"] element.</msg>
+<msg time="2024-06-11T15:19:56.054832" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2024-06-11T15:19:56.055829" level="INFO">Sending key a</msg>
+<msg time="2024-06-11T15:19:56.055829" level="INFO">Releasing special key CONTROL.</msg>
+<arg>${Flights.Button_DataVolta}</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-06-11T15:19:55.753490" elapsed="0.333093"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:56.089496" level="INFO">Typing text '21-06-2024' into text field '//*[@id="return_date"]'.</msg>
+<arg>${Flights.Button_DataVolta}</arg>
+<arg>${voo_data.Data_Volta}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:56.087496" elapsed="0.197506"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:55.670916" elapsed="0.614086"/>
+</kw>
+<kw name="E selecionando um passageiro" owner="voo_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:56.286997" level="INFO">Clicking element '//*[@id="onereturn"]/div[4]/div/div/div/a'.</msg>
+<arg>${Flights.Button_Passageiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:56.286997" elapsed="0.539837"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:56.285999" elapsed="0.541834"/>
+</kw>
+<kw name="Quando eu clico em buscar" owner="voo_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-11T15:19:56.831825" level="INFO">Clicking element '//button[@id="flights-search"]'.</msg>
+<arg>${Flights.Button_Pesquisar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T15:19:56.830827" elapsed="13.771267"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:56.829827" elapsed="13.772267"/>
+</kw>
+<kw name="Então a página de vôos disponíveis é exibida" owner="voo_resultado_page">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${voo_resultado.url_Vôos}</arg>
+<arg>30</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-06-11T15:20:10.618996" elapsed="0.158181"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:20:10.617999" elapsed="0.160180"/>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-11T15:20:10.779178" elapsed="8.854665"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:20:10.779178" elapsed="8.854665"/>
+</kw>
+<status status="PASS" start="2024-06-11T15:19:20.285759" elapsed="59.353890"/>
+</test>
+<status status="PASS" start="2024-06-11T15:19:19.876395" elapsed="59.771196"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Voo">Voo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
